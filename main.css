@@ -1,14 +1,42 @@
 *{box-sizing:border-box;}
 body{
     font-family: 'Montserrat', sans-serif;
+    background-image:url(./images/3863be4f6576ebcf3a3ea87155611932.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 100%;
+    margin:0;
+    padding:0;
 }
+header{
+    
+}
+header > div:hover{
+    transition:transform 0.8s;
+    transform:scale(1.2);
+    
+}
+
+main{
+    color:goldenrod;
+    cursor:pointer;
+    padding:0px 30px;
+    text-align: center;
+}
+nav{
+    display:inline-block;
+    width:80%;
+    margin:0 60px;
+    
+}
+
 li.main-nav__item{
     display:inline-block;
     padding: 10px;
     background-color: lightsteelblue;
-    border-radius:15px;
-    margin: 10px 70px;
-    border:5px solid goldenrod;
+    border-radius:15px 15px 15px 0;
+    margin: 10px 30px;
+    border-bottom:5px solid goldenrod;
     cursor:pointer;
 }
 
@@ -16,6 +44,12 @@ li.main-nav__item:hover{
     
     transition:transform 0.8s;
     transform:scale(1.2);
+    animation:ugo .3s linear 0.1s infinite alternate;
+}
+
+li.main-nav__item:hover a{
+    
+    animation:ugo .3s linear 0.1s infinite alternate;
 }
 
 header.main-header{
@@ -23,8 +57,8 @@ header.main-header{
     height: 100%;
     width: 100%;
     padding:0 10px;
-    border-radius:20px;
-    border:5px solid goldenrod;
+    border-radius:0 0 20px 0;
+    border-bottom:5px solid goldenrod;
     
 }
 
@@ -34,25 +68,47 @@ header a{
     font-family: 'Pacifico', cursive; 
 }
 
+div > a:hover{
+    animation:ugo .3s linear 0.1s infinite alternate;
+}
+
+header a:active{
+    color: blue; 
+}
+
+header ul li:first-child a{
+    color:red;
+    animation:ugo .3s linear 0.1s infinite alternate;
+}
+
+@keyframes ugo{
+    from{color: red;}
+    to{color:black;}
+}
+
+
 header.main-header ul{
-    display:block;
-    background-color:blue;
+    
+    
+    background-color:;
     height: 100%;
-    width: 100%;
-    margin:;
-    border-radius:20px;
+    width: 80%;
+    margin:0 auto;
+    border-radius:20px 20px 20px 0;
 
 }
 
+header.main-header ul:hover{
+    transition:background-color 2.5s;
+    background-color:goldenrod;
+}
+
 header > div{
+    display: inline-block;
     background-color: lightsteelblue;
     width:55px;
     height:100%;
     border-radius:10px;
-    border:3px solid goldenrod;
+    border-bottom:3px solid goldenrod;
 }
 
-header > div:hover{
-    transition:transform 0.8s;
-    transform:scale(1.2);
-}
